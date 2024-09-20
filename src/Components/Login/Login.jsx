@@ -41,7 +41,7 @@ const Login = () => {
     setErrors(Validate(femail, fpassword));
     try {
       const response = await axios.post(
-        "https://admin-dash-mauve.onrender.com/api/users/login",
+         "https://admin-dash-mauve.onrender.com/api/users/login",
         // "http://localhost:3001/api/users/login",
 
         {
@@ -63,7 +63,7 @@ const Login = () => {
         setMessage("Invalid request. Please check your input.");
       }
     } catch (error) {
-      if (error.response.data.error === "please enter your email") {
+      if (error.response.status === "please enter your email") {
         setMessage("please enter your email");
       }
       if (error.response.data.error === "please enter your password") {
