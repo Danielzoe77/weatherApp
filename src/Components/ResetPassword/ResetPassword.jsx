@@ -39,7 +39,8 @@ const ResetPassword = () => {
 
     try {
       const response = await axios.post(
-        "https://admin-dash-mauve.onrender.com/api/users/resetPassword/" +
+        // "https://admin-dash-mauve.onrender.com/api/users/resetPassword/"
+       " https://weatherapp-8ixx.onrender.com/api/users/resetPassword/" +
           token,
         {
           // email:email,
